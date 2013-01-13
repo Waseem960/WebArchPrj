@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Homepage</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes4/skin.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic2.css" />
+
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" resizable="false"
+			closable="false" collapsible="false">
+			<h:form>
+				<p:panelGrid styleClass="centered centro textshadow">
+					<p:row>
+						<p:column colspan="9">
+							<p:column>
+								<p:graphicImage value="/images/shopImg.jpg" />
+							</p:column>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink value="HomePage.xhtml">Homepage</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="ReservedArea.xhtml">Area Riservata</h:outputLink>
+						</p:column>					
+						<p:column>
+							<h:outputLink value="Privacy.xhtml">Privacy</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="WhoAreWe.xhtml">Chi Siamo</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:commandLink value="#{loginB.loginStatus()}"
+								action="#{loginB.loginCancel()}" />
+						</p:column>
+					</p:row>
+
+				</p:panelGrid>
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" resizable="true" size="100" minSize="40"
+			maxSize="150">
+		</p:layoutUnit>
+		<p:layoutUnit position="east" resizable="true" size="100" minSize="40"
+			maxSize="150">
+		</p:layoutUnit>
+		<p:layoutUnit position="center">
+			<h:form prependId="false">
+				<p:growl id="msgs" showDetail="true" />
+				
+				<p:panel header="Riservatezza dai dati!"
+					style="margin-bottom:100px;">
+					<p:fieldset legend="Questione di Privacy?">
+<strong>Privacy</strong><p> In questa sezione ricordiamo a tutti i nostri utenti ( clienti, commercianti e chiunque usufruisce del nostro sito) che ci dissociamo completamente dalle opinioni, dai commenti e dalle descrizioni contenute nel sito: è il libero pensiero dei nostri utenti che qui trovano spazio per diffonderlo.
+Ovviamente non possiamo  permettere che qualcuno possa sentirsi offeso dalla informazioni riportate su questo sito e quindi cerchiamo di controllare attentamente ciò che vi viene pubblicato sopra!
+Per la legge della privacy si fa riferimento a quanto contenuto nelle leggi che riguardano questo argomento.
+</p>
+				</p:fieldset>
+				</p:panel>
+			</h:form>
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

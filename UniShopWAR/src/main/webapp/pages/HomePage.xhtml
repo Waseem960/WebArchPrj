@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Homepage</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes4/skin.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic2.css" />
+
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" resizable="false"
+			closable="false" collapsible="false">
+			<h:form>
+				<p:panelGrid styleClass="centered centro textshadow">
+					<p:row>
+						<p:column colspan="9">
+							<p:column>
+								<p:graphicImage value="/images/shopImg.jpg" />
+							</p:column>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink value="HomePage.xhtml">Homepage</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="ReservedArea.xhtml">Area Riservata</h:outputLink>
+						</p:column>					
+						<p:column>
+							<h:outputLink value="Privacy.xhtml">Privacy</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="WhoAreWe.xhtml">Chi Siamo</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:commandLink value="#{loginB.loginStatus()}"
+								action="#{loginB.loginCancel()}" />
+						</p:column>
+					</p:row>
+
+				</p:panelGrid>
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" resizable="true" size="100" minSize="40"
+			maxSize="150">
+		</p:layoutUnit>
+		<p:layoutUnit position="east" resizable="true" size="100" minSize="40"
+			maxSize="150">
+		</p:layoutUnit>
+		<p:layoutUnit position="center">
+			<h:form prependId="false">
+				<p:growl id="msgs" showDetail="true" />
+				<p:fieldset legend="Obiettivo del sito">
+					<p>“Dai la tua opinione sui negozi, supermercati, bar,
+						discoteche ecc… in cui ti rechi abitualmente. Scrivi cosa ti ha
+						colpito di quel dato locale e come lo vorresti! Cerca e Leggi le
+						opinioni di altre persone su negozi in cui stai per fare acquisti!
+						Su questo sito puoi fare tutto questo e molto altro ancora.”</p>
+				</p:fieldset>
+				<p:panel header="Lista dei negozi o ed attività"
+					style="margin-bottom:100px;">
+					<p:panelGrid>
+						<p:row>
+							<p:column>
+								<p:selectOneMenu id="regionSel" value="#{viewShops.region}"
+									style="width:200px;">
+									<f:selectItem itemLabel="scegli regione" itemValue="" />
+									<f:selectItems value="#{viewShops.regionMap}" />
+									<p:ajax update="districtSel"
+										listener="#{viewShops.handleRegionChange}" />
+									<p:ajax update="municipalSel"
+										listener="#{viewShops.handleDistrictChange}" />
+									<p:ajax update="dataTable"
+										listener="#{viewShops.handleChangeDatatableRegion}" />
+								</p:selectOneMenu>
+							</p:column>
+							<p:column>
+								<p:selectOneMenu id="districtSel" value="#{viewShops.district}"
+									style="width:200px;">
+									<f:selectItem itemLabel="  scegli provincia  " itemValue="" />
+									<f:selectItems value="#{viewShops.districtMap}" />
+									<p:ajax update="municipalSel"
+										listener="#{viewShops.handleDistrictChange}" />
+									<p:ajax update="dataTable"
+										listener="#{viewShops.handleChangeDatatableDistrict}" />
+								</p:selectOneMenu>
+							</p:column>
+							<p:spacer></p:spacer>
+							<p:column>
+								<p:selectOneMenu id="municipalSel"
+									value="#{viewShops.municipal}" style="width:200px;">
+									<f:selectItem itemLabel="  scegli comune  " itemValue="" />
+									<f:selectItems value="#{viewShops.municipalMap}" />
+									<p:ajax update="dataTable"
+										listener="#{viewShops.handleChangeDatatableMunicipal}" />
+								</p:selectOneMenu>
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+
+					<p:separator />
+					<p:dataTable id="dataTable" var="shop" value="#{viewShops.shops}"  emptyMessage="Nessun negozio trovato con i criteri indicati."
+						paginator="true" rows="10"
+						paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+						rowsPerPageTemplate="5,10,15" sortOrder="descending">
+						<p:column sortBy="#{shop.name}">
+							<f:facet name="header">
+								<h:outputText value="Denominazione del negozio" />
+							</f:facet>
+							<h:outputText value="#{shop.name}" />
+
+							<p:separator />
+							<h:outputLink value="ViewShop.xhtml">
+								<f:param name="idshop" value="#{shop.idshop}" />
+								<h:graphicImage value="/images/View_icon.png" width="32"
+									height="32" />
+							</h:outputLink>
+							<h:outputLink value="restrict/LeaveComment.xhtml">
+								<f:param name="idshop" value="#{shop.idshop}" />
+								<h:graphicImage value="/images/comment-edit-icon.png" width="32"
+									height="32" />
+							</h:outputLink>
+
+						</p:column>
+						<p:column sortBy="#{shop.description}">
+							<f:facet name="header">
+								<h:outputText value="Descrizione del negozio" />
+							</f:facet>
+							<h:outputText value="#{shop.description}" escape="false" />
+						</p:column>
+						<p:column sortBy="#{shop.author}">
+							<f:facet name="header">
+								<h:outputText value="Autore" />
+							</f:facet>
+							<h:outputText value="#{shop.author}" />
+						</p:column>
+
+						<p:column sortBy="#{shop.numberComments}">
+							<f:facet name="header">
+								<h:outputText value="# commenti" />
+							</f:facet>
+							<h:outputLink value="ViewComments.xhtml">
+								<h1>
+									<h:outputText value="#{shop.numberComments}" />
+								</h1>
+								<f:param name="idshop" value="#{shop.idshop}" />
+							</h:outputLink>
+						</p:column>
+
+					</p:dataTable>
+				</p:panel>
+			</h:form>
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

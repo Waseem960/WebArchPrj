@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Homepage</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes4/skin.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic2.css" />
+
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" resizable="false"
+			closable="false" collapsible="false">
+			<h:form>
+				<p:panelGrid styleClass="centered centro textshadow">
+					<p:row>
+						<p:column colspan="9">
+							<p:column>
+								<p:graphicImage value="/images/shopImg.jpg" />
+							</p:column>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink value="HomePage.xhtml">Homepage</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="ReservedArea.xhtml">Area Riservata</h:outputLink>
+						</p:column>					
+						<p:column>
+							<h:outputLink value="Privacy.xhtml">Privacy</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="WhoAreWe.xhtml">Chi Siamo</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:commandLink value="#{loginB.loginStatus()}"
+								action="#{loginB.loginCancel()}" />
+						</p:column>
+					</p:row>
+
+				</p:panelGrid>
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" resizable="true" size="100" minSize="40"
+			maxSize="150">
+		</p:layoutUnit>
+		<p:layoutUnit position="east" resizable="true" size="100" minSize="40"
+			maxSize="150">
+		</p:layoutUnit>
+		<p:layoutUnit position="center">
+			<h:form prependId="false">
+				<p:growl id="msgs" showDetail="true" />
+				
+				<p:panel header="Ci presentiamo!"
+					style="margin-bottom:100px;">
+					<p:fieldset legend="Chi Siamo?">
+<strong>Salve a tutti, 
+ai clienti e ai negozianti ( quindi un saluto proprio a tutti!)</strong><p> <em>L’ esigenza di condividere l’ opinione sui negozi con altre persone ci ha portati alla creazione di questo sito.
+È un’idea che nasce dopo aver sperimentato che ascoltando i consigli di altre persone su qualcosa di cui si sa poco si fanno scelte migliori, almeno ci si prova.
+Quindi su questo sito è possibile lasciare i propri commenti su negozi che di solito frequentiamo, magari specificando cosa ci ha colpito di quel locale, se ci ha fatto una buona impressione, se il commesso era gentile o no e quello che ci viene in mente. 
+Con l’auspicio che questo sito web possa servire ai clienti per confrontarsi a ai commercianti a rendere migliori i loro negozi, anche grazie all’ opzione di potersi registrare e pubblicizzare la propria attività, ringrazio tutti per la propria partecipazione!
+S.A.S</em> </p>
+				</p:fieldset>
+				</p:panel>
+			</h:form>
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

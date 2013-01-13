@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>New User</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes4/skin.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic.css" />
+
+
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" resizable="false"
+			closable="false" collapsible="false">
+			<form>
+				<p:panelGrid styleClass="centered">
+					<p:row>
+						<p:column colspan="6">
+							<p:column>
+								<p:graphicImage value="/images/shopImg.jpg" />
+							</p:column>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Homepage</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Spazio Commercianti</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Spazio Clienti</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Privacy</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Copyright</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Contatti</h:outputLink>
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+			</form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="south" size="100" header="Bottom"
+			resizable="true" closable="true" collapsible="true">
+			<h:outputText value="South unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" size="200" header="Left"
+			resizable="true" closable="true" collapsible="true">
+			<h:form>
+
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="east" size="200" header="Right"
+			resizable="true" closable="true" collapsible="true" effect="drop">
+			<h:outputText value="Right unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+
+			<h:form>
+				<p:fieldset id="commentID" legend="Lasciare un commento"
+					style="margin-top:10px">
+<!--  				<p:panel id="panel">						-->
+						<p:growl id="growl" showDetail="true" sticky="true" />
+						<p:panelGrid styleClass="centered">
+							<p:row>
+								<p:column>
+									<h:outputText value="Autore:" />
+								</p:column>
+								<p:column>
+									<h:outputLabel value="#{commentB.autore}" />
+								</p:column>
+							</p:row>
+							<p:row>
+								<p:column>
+									<h:outputText value="Data:" />
+								</p:column>
+
+								<p:column>
+									<h:outputLabel value="#{commentB.date}" />
+								</p:column>
+							</p:row>
+							<p:row>
+								<p:column colspan="2">
+									<p:fieldset id="fiedComm" legend="Commento">
+										<h:inputTextarea value="#{commentB.userComment}" size="100"/>
+									</p:fieldset>
+								</p:column>
+							</p:row>
+							<p:row>
+								<p:column>
+									<p:commandButton value="Aggiungi Commento" update="growl"
+										action="#{commentB.addComment}" />
+								</p:column>
+							</p:row>
+						</p:panelGrid>
+<!-- 					</p:panel> -->
+				</p:fieldset>
+			</h:form>
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

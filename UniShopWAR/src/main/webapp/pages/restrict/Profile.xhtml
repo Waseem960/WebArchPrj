@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Homepage</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes4/skin.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic.css" />
+
+
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" resizable="false"
+			closable="false" collapsible="false">
+			<h:form>
+				<p:panelGrid styleClass="centered centro textshadow">
+					<p:row>
+						<p:column colspan="9">
+							<p:column>
+								<p:graphicImage value="/images/shopImg.jpg" />
+							</p:column>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink value="../HomePage.xhtml">Homepage</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="../ReservedArea.xhtml">Area Riservata</h:outputLink>
+						</p:column>					
+						<p:column>
+							<h:outputLink value="../Privacy.xhtml">Privacy</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="../WhoAreWe.xhtml">Chi Siamo</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:commandLink value="#{loginB.loginStatus()}"
+								action="#{loginB.loginCancel()}" />
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+			</h:form>
+		</p:layoutUnit>
+		<p:layoutUnit position="west" size="150" header="Left"
+			resizable="true" closable="true" collapsible="true">
+
+		</p:layoutUnit>
+
+		<p:layoutUnit position="east" size="150" header="Right"
+			resizable="true" closable="true" collapsible="true" effect="drop">
+			<h:outputText value="Right unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+			<h:form prependId="false">
+				<p:growl id="msgs" showDetail="true" />
+				<p:panel header="Informazioni personali per dell'utente"
+					style="margin-bottom:100px;">
+					<p:panelGrid styleClass="centered">
+						<p:row>
+							<!-- 							<p:column rowspan="11" style="font-weight: bold;">Nome</p:column>-->
+							<p:column style="font-weight: bold;">Nome</p:column>
+							<p:column>
+								<h:outputText value="#{viewUserB.user.name}" />
+							</p:column>
+							<p:column rowspan="4">
+								<p:graphicImage value="#{viewUserB.content}" width="200"
+									height="200" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column style="font-weight: bold;">Cognome</p:column>
+							<p:column>
+								<h:outputText value="#{viewUserB.user.surname}" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column style="font-weight: bold;">Username</p:column>
+							<p:column>
+								<h:outputText value="#{viewUserB.user.username}" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column style="font-weight: bold;">Indrizzo email</p:column>
+							<p:column>
+								<h:outputText value="#{viewUserB.user.email}" />
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+
+					<p:separator />
+					<h:outputLink value="ModifyUser.xhtml">Modifica dati utente</h:outputLink>
+					<p:separator />
+					<p>Sotto sono elencati i negozi appartenenti all'utente</p>
+					<p:dataTable id="dataTable" var="shop" value="#{viewUserB.shops}"
+						paginator="true" rows="10"
+						paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+						rowsPerPageTemplate="5,10,15" sortOrder="descending">
+						<p:column sortBy="#{shop.name}">
+							<f:facet name="header">
+								<h:outputText value="Denominazione del negozio" />
+							</f:facet>
+							<h:outputText value="#{shop.name}" />
+							<h:outputLink value="LeaveComment.xhtml">
+								<f:param name="idshop" value="#{shop.idshop}" />
+								<h:graphicImage value="/images/comment-edit-icon.png" width="32"
+									height="32" />
+							</h:outputLink>
+						</p:column>
+						<p:column sortBy="#{shop.description}">
+							<f:facet name="header">
+								<h:outputText value="Descrizione del negozio" />
+							</f:facet>
+							<h:outputText value="#{shop.description}" escape="false" />
+						</p:column>
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Modifica" />
+							</f:facet>
+							<h:outputLink value="ModifyShop.xhtml">
+								<f:param name="idshop" value="#{shop.idshop}" />
+								<h:graphicImage value="/images/edit_comment.png" width="32"
+									height="32" />
+							</h:outputLink>
+						</p:column>
+						<p:column>
+							<f:facet name="header">
+								<h:outputText value="Elimina" />
+							</f:facet>
+							<h:commandLink action="#{modifyShopB.deleteShop()}">
+								<f:param name="idshop" value="#{shop.idshop}" />
+								<h:graphicImage value="/images/delete_comment.png" width="32"
+									height="32" />
+							</h:commandLink>
+						</p:column>
+						<p:column sortBy="#{shop.numberComments}">
+							<f:facet name="header">
+								<h:outputText value="# commenti" />
+							</f:facet>
+							<h:outputLink value="ViewComments.xhtml">
+								<h:outputText value="#{shop.numberComments}" />
+								<f:param name="idshop" value="#{shop.idshop}" />
+							</h:outputLink>
+						</p:column>
+
+					</p:dataTable>
+				</p:panel>
+
+			</h:form>
+
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

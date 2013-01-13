@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Login</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes4/skin.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic.css" />
+
+	<script type="text/javascript">
+	function handleLoginRequest(xhr, status, args) {
+		if(args.validationFailed || !args.loggedIn) {
+			jQuery('#dialog').effect("shake", { times:3 }, 100);
+			 
+		} else {
+			dlg.hide();
+			window.location = "../pages/HomePage.xhtml"
+			jQuery('#loginLink').fadeOut();
+			
+		}
+	}
+</script>
+
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" resizable="false"
+			closable="false" collapsible="false">
+			<form>
+				<p:panelGrid styleClass="centered">
+					<p:row>
+						<p:column colspan="6">
+							<p:column>
+								<p:graphicImage value="/images/shopImg.jpg" />
+							</p:column>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Homepage</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Spazio Commercianti</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="InsertShop.xhtml">Spazio Clienti</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Privacy</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Copyright</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Contatti</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="Login.xhtml">Login</h:outputLink>
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+			</form>
+		</p:layoutUnit>
+		<p:layoutUnit position="west" size="150" header="Left"
+			resizable="true" closable="true" collapsible="true">
+
+		</p:layoutUnit>
+
+		<p:layoutUnit position="east" size="150" header="Right"
+			resizable="true" closable="true" collapsible="true" effect="drop">
+			<h:outputText value="Right unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+
+			<p:panel id="panel"
+				header="Procedura di login per un utente già registrato">
+				<p:panelGrid>
+					<p:row>
+						<p:column>
+							<h:outputLink id="loginLink" value="javascript:void(0)"
+								onclick="dlg.show()" title="login">Login</h:outputLink>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink value="InsertUser.xhtml">Registrazione di un nuovo utente</h:outputLink>
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+
+				<p:dialog id="dialog" header="Login" widgetVar="dlg">
+					<h:form>
+						<p:growl id="growl" showDetail="true" life="3000" />
+
+						<h:panelGrid columns="2" cellpadding="5">
+							<h:outputLabel for="username" value="Username: *" />
+							<p:inputText value="#{loginB.username}" id="username"
+								required="true" label="username" />
+
+							<h:outputLabel for="password" value="Password: * " />
+							<h:inputSecret value="#{loginB.password}" id="password"
+								required="true" label="password" />
+
+							<f:facet name="footer">
+								<p:commandButton value="Login" update="growl"
+									actionListener="#{loginB.myLogin()}"
+									oncomplete="handleLoginRequest(xhr, status, args)" />
+							</f:facet>
+						</h:panelGrid>
+
+					</h:form>
+				</p:dialog>
+			</p:panel>
+
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

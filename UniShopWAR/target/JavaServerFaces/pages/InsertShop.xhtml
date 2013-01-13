@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>New User</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes4/skin.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic.css" />
+
+
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" resizable="false"
+			closable="false" collapsible="false">
+			<form>
+				<p:panelGrid styleClass="centered">
+					<p:row>
+						<p:column colspan="6">
+							<p:column>
+								<p:graphicImage value="/images/shopImg.jpg" />
+							</p:column>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Homepage</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Spazio Commercianti</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Spazio Clienti</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Privacy</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Copyright</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centered" value="HomePage.xhtml">Contatti</h:outputLink>
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+			</form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="south" size="100" header="Bottom"
+			resizable="true" closable="true" collapsible="true">
+			<h:outputText value="South unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" size="200" header="Left"
+			resizable="true" closable="true" collapsible="true">
+			<h:form>
+
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="east" size="200" header="Right"
+			resizable="true" closable="true" collapsible="true" effect="drop">
+			<h:outputText value="Right unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+
+			<h:form>
+				<p:panel id="panel"
+					header="Procedura di registrazione di un negozio">
+					<!-- <p:messages id="msgs" /> -->
+					<p:growl id="growl" showDetail="true" sticky="true" />
+					<p:panelGrid styleClass="centered">
+						<f:facet name="header">
+							<p:row>
+								<p:column colspan="4">Registrazione nuovo negozio</p:column>
+							</p:row>
+						</f:facet>
+						<p:row>
+							<p:column>
+								<h:outputText value="Nome o Ragione sociale : *" />
+							</p:column>
+							<p:column colspan="2">
+								<p:inputText required="true" label="Nome" value="#{shopB.name}"
+									size="60">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputText value="Descrizione: *" />
+							</p:column>
+							<p:column colspan="3">
+								<p:editor id="editor" value="#{shopB.description}" width="435" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column colspan="3">
+								<h4>Dove si trova?</h4>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<p:selectOneMenu id="region" value="#{location.region}"
+									style="width:200px;">
+									<f:selectItem itemLabel="scegli regione" itemValue="" />
+									<f:selectItems value="#{location.regionMap}" />
+									<p:ajax update="disctric"
+										listener="#{location.handleRegionChange()}" />
+									<p:ajax update="muncipal"
+										listener="#{location.handleDistrictChange()}" />
+								</p:selectOneMenu>
+							</p:column>
+							<p:column>
+								<p:selectOneMenu id="disctric" value="#{location.district}"
+									style="width:200px;">
+									<f:selectItem itemLabel="  scegli provincia  " itemValue="" />
+									<f:selectItems value="#{location.districtMap}" />
+									<p:ajax update="muncipal"
+										listener="#{location.handleDistrictChange()}" />
+								</p:selectOneMenu>
+							</p:column>
+							<p:spacer></p:spacer>
+							<p:column>
+								<p:selectOneMenu id="muncipal" value="#{shopB.municipal}"
+									style="width:200px;">
+									<f:selectItem itemLabel="  scegli comune  " itemValue="" />
+									<f:selectItems value="#{location.municipalMap}" />
+								</p:selectOneMenu>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputText value="Indirizzo : *" />
+							</p:column>
+							<p:column colspan="2">
+								<p:inputText required="true" label="Indirizzo"
+									value="#{shopB.address}" size="60">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<p:commandButton value="Salva negozio" update="growl"
+									action="#{shopB.addShop}" />
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+				</p:panel>
+			</h:form>
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

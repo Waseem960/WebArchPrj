@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>New User</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes4/skin.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic.css" />
+
+
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" resizable="false"
+			closable="false" collapsible="false">
+			<form>
+				<p:panelGrid styleClass="centered">
+					<p:row>
+						<p:column styleClass="centro" colspan="6">
+							<p:graphicImage value="/images/shopImg.jpg" />
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+
+				<h:panelGrid>
+					<p:row>
+						<p:column>
+							<h:outputLink styleClass="centro" value="HomePage.xhtml">
+								<h5>Homepage</h5>
+							</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centro" value="HomePage.xhtml">
+								<h5>Spazio Commercianti</h5>
+							</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centro" value="HomePage.xhtml">
+								<h5>Spazio Clienti</h5>
+							</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centro" value="HomePage.xhtml">
+								<h5>Privacy</h5>
+							</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centro" value="HomePage.xhtml">
+								<h5>Copyright</h5>
+							</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink styleClass="centro" value="HomePage.xhtml">
+								<h5>Contatti</h5>
+							</h:outputLink>
+						</p:column>
+					</p:row>
+				</h:panelGrid>
+			</form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="south" size="100" header="Bottom"
+			resizable="true" closable="true" collapsible="true">
+			<h:outputText value="South unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" size="200" header="Left"
+			resizable="true" closable="true" collapsible="true">
+			<h:form>
+
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="east" size="200" header="Right"
+			resizable="true" closable="true" collapsible="true" effect="drop">
+			<h:outputText value="Right unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+
+			<h:form>
+				<p:panel id="panel" header="Procedura di registrazione di un utente">
+					<!-- <p:messages id="msgs" /> -->
+					<p:growl id="growl" showDetail="true" sticky="true" />
+					<p:panelGrid styleClass="centered">
+						<f:facet name="header">
+							<p:row>
+								<p:column colspan="4">Registrazione nuovo utente</p:column>
+							</p:row>
+						</f:facet>
+						<p:row>
+							<p:column>
+								<h:outputText value="#{msgs.label_name}:*" />
+							</p:column>
+							<p:column>
+								<p:inputText required="true" label="#{msgs.label_name}:*"
+									value="#{userB.name}">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputText value="Cognome: *" />
+							</p:column>
+
+							<p:column>
+								<p:inputText required="true" label="Cognome"
+									value="#{userB.surname}">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputText value="Nome utente:" />
+							</p:column>
+							<p:column>
+								<p:inputText required="true" label="Username"
+									value="#{userB.username}">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+
+							</p:column>
+						</p:row>
+
+						<p:row>
+							<p:column>
+								<h:outputText value="Password: *" />
+							</p:column>
+							<p:column>
+								<p:password id="pwd1" value="#{userB.password}" match="pwd2"
+									label="Password 1" required="true">
+									<f:validateLength minimum="2" />
+								</p:password>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputText value="Conferma Password: *" />
+							</p:column>
+							<p:column>
+								<p:password id="pwd2" value="#{userB.password}"
+									label="Password 2" required="true" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputText value="Email: *" />
+							</p:column>
+							<p:column>
+								<p:inputText required="true" label="Email"
+									value="#{userB.email}">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+					<p:panelGrid style="margin-top:20px">
+						<p:row>
+							<p:column>
+								<h:outputText value="Foto: *" />
+							</p:column>
+							<p:column>
+								<p:fileUpload fileUploadListener="#{userB.handleFileUpload}"
+									mode="advanced" update="msg" multiple="false"
+									sizeLimit="100000" allowTypes="/(\.|\/)(gif|jpe?g|png)$/" />
+								<p:growl id="msg" severity="info" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<p:commandButton value="Save User" update="growl"
+									action="#{userB.addUser}" />
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+				</p:panel>
+			</h:form>
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

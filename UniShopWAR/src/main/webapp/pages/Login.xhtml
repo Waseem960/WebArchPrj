@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Login</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes4/skin.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic.css" />
+
+	<script type="text/javascript">
+	function handleLoginRequest(xhr, status, args) {
+		if(args.validationFailed || !args.loggedIn) {
+			jQuery('#dialog').effect("shake", { times:3 }, 100);
+			 
+		} else {
+			dlg.hide();
+			window.location = "../pages/HomePage.xhtml"
+			jQuery('#loginLink').fadeOut();
+			
+		}
+	}
+</script>
+
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" resizable="false"
+			closable="false" collapsible="false">
+			<h:form>
+				<p:panelGrid styleClass="centered centro textshadow">
+					<p:row>
+						<p:column colspan="9">
+							<p:column>
+								<p:graphicImage value="/images/shopImg.jpg" />
+							</p:column>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink value="HomePage.xhtml">Homepage</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="ReservedArea.xhtml">Area Riservata</h:outputLink>
+						</p:column>					
+						<p:column>
+							<h:outputLink value="Privacy.xhtml">Privacy</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="WhoAreWe.xhtml">Chi Siamo</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:commandLink value="#{loginB.loginStatus()}"
+								action="#{loginB.loginCancel()}" />
+						</p:column>
+					</p:row>
+
+				</p:panelGrid>
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" resizable="true" size="100" minSize="40"
+			maxSize="150">
+		</p:layoutUnit>
+		<p:layoutUnit position="east" resizable="true" size="100" minSize="40"
+			maxSize="150">
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+
+			<p:panel id="panel"
+				header="">
+				<p:fieldset legend="Spazio Commercianti">
+					<p>Se sei un commerciante e vuoi inserire la descrizione del/dei tuo/tuoi negozio/i tra quelli presenti in questo sito puoi farlo dopo esserti registrato. Cosa aspetti allora? Registrati subito e inizia anche tu a scoprire i servizi che ti dà Universe Shop.</p>
+				</p:fieldset>
+
+				<p:fieldset legend="Proceduca di login o registrazione">
+
+				<p:panelGrid>
+					<p:row>
+						<p:column>
+							<h:outputLink id="loginLink" value="javascript:void(0)"
+								onclick="dlg.show()" title="login">Login</h:outputLink>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink value="InsertUser.xhtml">Registrazione di un nuovo utente</h:outputLink>
+						</p:column>
+					</p:row>
+				</p:panelGrid>
+</p:fieldset>
+				<p:dialog id="dialog" header="Login" widgetVar="dlg">
+					<h:form>
+						<p:growl id="growl" showDetail="true" life="3000" />
+
+						<p:panelGrid>
+							<p:row>
+								<p:column>
+									<h:outputLabel for="username" value="Username: *" />
+								</p:column>
+								<p:column>
+									<p:inputText value="#{loginB.username}" id="username"
+										required="true" label="username" />
+								</p:column>
+							</p:row>
+							<p:row>
+								<p:column>
+									<h:outputLabel for="password" value="Password: * " />
+								</p:column>
+								<p:column>
+									<p:password value="#{loginB.password}" id="password"
+										required="true" label="password" />
+								</p:column>
+
+							</p:row>
+							<p:row>
+								<p:column colspan="2">
+									<p:captcha label="Captcha" language="tr" theme="white" />
+								</p:column>
+							</p:row>
+
+							<p:row>
+								<p:column colspan="2">
+
+									<p:commandButton value="Login" update="growl"
+										actionListener="#{loginB.myLogin()}"
+										oncomplete="handleLoginRequest(xhr, status, args)" />
+
+								</p:column>
+							</p:row>
+
+						</p:panelGrid>
+
+					</h:form>
+				</p:dialog>
+			</p:panel>
+
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

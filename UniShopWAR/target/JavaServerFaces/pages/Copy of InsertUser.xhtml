@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>New User</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes3/css/custom-theme/skin.css" />
+</h:head>
+<h:body>
+
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="100" header="Top"
+			resizable="true" closable="true" collapsible="true">
+			<h:outputText value="Top unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="south" size="100" header="Bottom"
+			resizable="true" closable="true" collapsible="true">
+			<h:outputText value="South unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" size="200" header="Left"
+			resizable="true" closable="true" collapsible="true">
+			<h:form>
+
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="east" size="200" header="Right"
+			resizable="true" closable="true" collapsible="true" effect="drop">
+			<h:outputText value="Right unit content." />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+			<h:form>
+				<p:growl id="growl" sticky="true" showDetail="true" />
+				<p:wizard widgetVar="wiz" flowListener="#{userB.onFlowProcess}">
+
+					<p:tab id="personal" title="Personale">
+						<p:panel header="Dati Personali">
+
+							<!-- <h:messages errorClass="error" /> -->
+							<p:messages id="messages2" />
+							<h:panelGrid>
+								<p:row>
+									<p:column>
+										<h:outputText value="Nome: *" />
+									</p:column>
+									<p:column>
+										<p:inputText required="true" label="Nome"
+											value="#{userB.name}">
+											<f:validateLength minimum="2" />
+										</p:inputText>
+									</p:column>
+								</p:row>
+
+								<p:row>
+									<p:column>
+										<h:outputText value="Cognome: *" />
+									</p:column>
+
+									<p:column>
+										<p:inputText required="true" label="Cognome"
+											value="#{userB.surname}">
+											<f:validateLength minimum="2" />
+										</p:inputText>
+									</p:column>
+								</p:row>
+								<p:row>
+									<p:column>
+										<p:messages id="msg" />
+									</p:column>
+
+									<p:column>
+										<p:fileUpload fileUploadListener="#{userB.handleFileUpload}"
+											mode="advanced"											
+											update="msg1" multiple="false"
+											sizeLimit="100000"
+											allowTypes="/(\.|\/)(gif|jpe?g|png)$/"/>
+										<p:growl id="msg1" severity="info" />
+									</p:column>
+								</p:row>
+
+								<p:row>
+									<p:column>
+										<h:outputText value="Skip to last: " />
+									</p:column>
+									<p:column>
+										<h:selectBooleanCheckbox value="#{userB.skip}" />
+									</p:column>
+								</p:row>
+								<p:column rowspan="3" style="font-weight: bold;">Chicago</p:column>
+							</h:panelGrid>
+						</p:panel>
+					</p:tab>
+
+					<p:tab id="contact" title="Contatto">
+						<p:panel header="Informazioni contatto">
+							<p:messages id="messages3" />
+							<h:messages errorClass="error" />
+
+							<h:panelGrid columns="2" columnClasses="label, value">
+
+								<h:outputText value="Username: *" />
+								<p:inputText required="true" label="Username"
+									value="#{userB.username}">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+
+								<h:outputText value="Password: *" />
+								<p:inputText value="#{userB.password}">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+
+								<h:outputText value="Email: *" />
+								<p:inputText required="true" label="Email"
+									value="#{userB.email}">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+
+							</h:panelGrid>
+						</p:panel>
+					</p:tab>
+
+					<p:tab id="confirm" title="Conferma">
+						<p:panel header="Confirmation">
+
+							<h:panelGrid id="confirmation" columns="4">
+								<h:outputText value="Nome: " />
+								<h:outputText styleClass="outputLabel" value="#{userB.name}" />
+
+								<h:outputText value="Surname: " />
+								<h:outputText styleClass="outputLabel" value="#{userB.surname}" />
+
+								<h:outputText value="Email: " />
+								<h:outputText styleClass="outputLabel" value="#{userB.email}" />
+
+								<h:outputText value="Username " />
+								<h:outputText styleClass="outputLabel" value="#{userB.username}" />
+
+								<h:outputText value="Password: " />
+								<h:outputText styleClass="outputLabel" value="#{userB.password}" />
+
+								<h:outputText />
+								<h:outputText />
+							</h:panelGrid>
+							<p:commandButton value="Save User" update="growl"
+								action="#{userB.addUser}" />
+						</p:panel>
+					</p:tab>
+				</p:wizard>
+			</h:form>
+
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

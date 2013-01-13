@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>New User</title>
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/themes4/skin.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/basic.css" />
+	<link type="text/css" rel="stylesheet"
+		href="#{request.contextPath}/themes/primefaces.css" />
+</h:head>
+<h:body>
+	<p:layout fullPage="true">
+		<p:layoutUnit position="north" size="150" resizable="false"
+			closable="false" collapsible="false">
+			<h:form>
+				<p:panelGrid styleClass="centered centro textshadow">
+					<p:row>
+						<p:column colspan="9">
+							<p:column>
+								<p:graphicImage value="/images/shopImg.jpg" />
+							</p:column>
+						</p:column>
+					</p:row>
+					<p:row>
+						<p:column>
+							<h:outputLink value="HomePage.xhtml">Homepage</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="ReservedArea.xhtml">Area Riservata</h:outputLink>
+						</p:column>					
+						<p:column>
+							<h:outputLink value="Privacy.xhtml">Privacy</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:outputLink value="WhoAreWe.xhtml">Chi Siamo</h:outputLink>
+						</p:column>
+						<p:column>
+							<h:commandLink value="#{loginB.loginStatus()}"
+								action="#{loginB.loginCancel()}" />
+						</p:column>
+					</p:row>
+
+				</p:panelGrid>
+			</h:form>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" resizable="true" size="100" minSize="40"
+			maxSize="150">
+		</p:layoutUnit>
+		<p:layoutUnit position="east" resizable="true" size="100" minSize="40"
+			maxSize="150">
+		</p:layoutUnit>
+		<p:layoutUnit position="center">
+
+			<h:form>
+				<p:panel id="panel" header="Procedura di registrazione di un utente">
+					<!-- <p:messages id="msgs" /> -->
+					<p:growl id="growl" showDetail="true" sticky="true" />
+					<p:fieldset legend="Nuovo utente">
+					<p>
+					Se sei un commerciante e vuoi inserire la descrizione del/dei tuo/tuoi negozio/i tra quelli presenti in questo sito puoi farlo dopo esserti registrato.
+Cosa aspetti allora? Registrati subito e inizia anche tu a scoprire i servizi che ti dà Universe Shop.					
+					</p>
+					
+					<p:panelGrid styleClass="centered">
+						<f:facet name="header">
+							<p:row>
+								<p:column colspan="4">Registrazione nuovo utente</p:column>
+							</p:row>
+						</f:facet>
+						<p:row>
+							<p:column>
+								<h:outputText value="Nome:*" />
+							</p:column>
+							<p:column>
+								<p:inputText required="true" label="Nome" value="#{userB.name}">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputText value="Cognome: *" />
+							</p:column>
+
+							<p:column>
+								<p:inputText required="true" label="Cognome"
+									value="#{userB.surname}">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputText value="Nome utente: *" />
+							</p:column>
+							<p:column>
+								<p:inputText required="true" label="Nome Utente"
+									value="#{userB.username}">
+									<f:validateLength minimum="2" />
+								</p:inputText>
+
+							</p:column>
+						</p:row>
+
+						<p:row>
+							<p:column>
+								<h:outputText value="Password: *" />
+							</p:column>
+							<p:column>
+								<p:password id="pwd1" value="#{userB.password}" match="pwd2"
+									label="Password 1" required="true">
+									<f:validateLength minimum="2" />
+								</p:password>
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputText value="Conferma Password: *" />
+							</p:column>
+							<p:column>
+								<p:password id="pwd2" value="#{userB.password}"
+									label="Password 2" required="true" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<h:outputText value="Email: *" />
+							</p:column>
+							<p:column>
+								<p:inputText required="true" label="Email"
+									value="#{userB.email}">
+									<f:validateLength minimum="2" />
+									<f:validateRegex
+										pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$" />
+									
+								</p:inputText>
+							</p:column>
+						</p:row>
+					</p:panelGrid>				
+					<p:panelGrid styleClass="centered">
+						<p:row>
+							<p:column>
+								<h:outputText value="Foto: " />
+							</p:column>
+							<p:column>
+								<p:fileUpload fileUploadListener="#{userB.handleFileUpload}"
+									mode="advanced" update="msg" multiple="false"									
+									invalidFileMessage="Formato del File è sbagliato, supporta solo JPG"
+									invalidSizeMessage="Size fino a 4MB"
+									sizeLimit="4194304" allowTypes="/(\.|\/)(jpe?g)$/" />
+								<p:growl id="msg" severity="info" />
+							</p:column>
+						</p:row>
+						<p:row>
+							<p:column>
+								<p:commandButton value="Save User" update="growl"
+									action="#{userB.addUser}" />
+							</p:column>
+						</p:row>
+					</p:panelGrid>
+					<h4>Con "*" i campi sono obligatori.</h4>
+					</p:fieldset>
+				</p:panel>
+			</h:form>
+		</p:layoutUnit>
+	</p:layout>
+</h:body>
+</html>

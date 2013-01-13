@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#pages#restrict#LeaveComment.xhtml"
+  PATH="/pages/restrict/LeaveComment.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#restrict#LeaveComment.xhtml:0"
+   NAME="item" PATH="/pages/restrict/LeaveComment.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="HomePage::#pages#HomePage.xhtml"
+    NAME="output" PATH="/pages/HomePage.xhtml"
+    TARGET="rules:#pages#HomePage.xhtml" TITLE="HomePage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#HomePage.xhtml"
+  PATH="/pages/HomePage.xhtml" SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#restrict#InsertShop.xhtml"
+  PATH="/pages/restrict/InsertShop.xhtml" SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#restrict#InsertShop.xhtml:0"
+   NAME="item" PATH="/pages/restrict/InsertShop.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="HomePage::#pages#HomePage.xhtml"
+    NAME="output" PATH="/pages/HomePage.xhtml"
+    TARGET="rules:#pages#HomePage.xhtml" TITLE="HomePage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#restrict#ModifyShop.xhtml"
+  PATH="/pages/restrict/ModifyShop.xhtml" SHAPE="32,241,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#restrict#ModifyShop.xhtml:0"
+   NAME="item" PATH="/pages/restrict/ModifyShop.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="HomePage::#pages#HomePage.xhtml"
+    NAME="output" PATH="/pages/HomePage.xhtml"
+    TARGET="rules:#pages#HomePage.xhtml" TITLE="HomePage" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#restrict#Profile.xhtml"
+  PATH="/pages/restrict/Profile.xhtml" SHAPE="240,257,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#restrict#Profile.xhtml:0" NAME="item"
+   PATH="/pages/restrict/Profile.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="Profile::#pages#restrict#Profile.xhtml"
+    NAME="output" PATH="/pages/restrict/Profile.xhtml"
+    TARGET="rules:#pages#restrict#Profile.xhtml" TITLE="Profile" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#restrict#ModifyUser.xhtml"
+  PATH="/pages/restrict/ModifyUser.xhtml" SHAPE="32,353,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#restrict#ModifyUser.xhtml:0"
+   NAME="item" PATH="/pages/restrict/ModifyUser.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="Profile::#pages#restrict#Profile.xhtml"
+    NAME="output" PATH="/pages/restrict/Profile.xhtml"
+    TARGET="rules:#pages#restrict#Profile.xhtml" TITLE="Profile" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#pages#Login.xhtml" PATH="/pages/Login.xhtml"
+  SHAPE="272,401,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#pages#InsertUser.xhtml"
+  PATH="/pages/InsertUser.xhtml" SHAPE="32,465,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#pages#InsertUser.xhtml:0" NAME="item"
+   PATH="/pages/InsertUser.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="Login::#pages#Login.xhtml" NAME="output"
+    PATH="/pages/Login.xhtml" TARGET="rules:#pages#Login.xhtml"
+    TITLE="Login" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

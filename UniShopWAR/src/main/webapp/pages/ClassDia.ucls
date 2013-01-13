@@ -1,0 +1,781 @@
+<class-diagram version="1.0.11" icons="true" automaticImage="JPEG" always-add-relationships="false" 
+  generalizations="false" realizations="false" associations="false" dependencies="false" nesting-relationships="false">  
+  <class id="1" corner="BOTTOM_RIGHT" language="java" name="it.unitn.CommentB" project="UniShopWAR" 
+    file="/UniShopWAR/src/main/java/it/unitn/CommentB.java" binary="false">    
+    <position height="-1" width="-1" x="419" y="451"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="2" corner="BOTTOM_RIGHT" language="java" name="it.unitn.Location" project="UniShopWAR" 
+    file="/UniShopWAR/src/main/java/it/unitn/Location.java" binary="false">    
+    <position height="-1" width="-1" x="1071" y="61"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="3" corner="BOTTOM_RIGHT" language="java" name="it.unitn.LoginB" project="UniShopWAR" 
+    file="/UniShopWAR/src/main/java/it/unitn/LoginB.java" binary="false">    
+    <position height="-1" width="-1" x="236" y="358"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="4" corner="TOP_RIGHT" language="java" name="it.unitn.ModifyShopB" project="UniShopWAR" 
+    file="/UniShopWAR/src/main/java/it/unitn/ModifyShopB.java" binary="false">    
+    <position height="-1" width="-1" x="990" y="463"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="5" corner="BOTTOM_RIGHT" language="java" name="it.unitn.ModifyUserB" project="UniShopWAR" 
+    file="/UniShopWAR/src/main/java/it/unitn/ModifyUserB.java" binary="false">    
+    <position height="-1" width="-1" x="-159" y="484"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="6" corner="BOTTOM_RIGHT" language="java" name="it.unitn.ShopB" project="UniShopWAR" 
+    file="/UniShopWAR/src/main/java/it/unitn/ShopB.java" binary="false">    
+    <position height="-1" width="-1" x="825" y="425"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="7" corner="BOTTOM_RIGHT" language="java" name="it.unitn.UserB" project="UniShopWAR" 
+    file="/UniShopWAR/src/main/java/it/unitn/UserB.java" binary="false">    
+    <position height="463" width="171" x="-449" y="234"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="true" signature="true" visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="8" corner="BOTTOM_RIGHT" language="java" name="it.unitn.ViewShopB" project="UniShopWAR" 
+    file="/UniShopWAR/src/main/java/it/unitn/ViewShopB.java" binary="false">    
+    <position height="-1" width="-1" x="631" y="368"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="9" corner="BOTTOM_RIGHT" language="java" name="it.unitn.ViewShops" project="UniShopWAR" 
+    file="/UniShopWAR/src/main/java/it/unitn/ViewShops.java" binary="false">    
+    <position height="-1" width="-1" x="1223" y="537"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="10" corner="BOTTOM_RIGHT" language="java" name="it.unitn.ViewUserB" project="UniShopWAR" 
+    file="/UniShopWAR/src/main/java/it/unitn/ViewUserB.java" binary="false">    
+    <position height="-1" width="-1" x="55" y="511"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="true" package="true" protected="true" private="true"/>    
+    </display>  
+  </class>  
+  <class id="11" corner="BOTTOM_RIGHT" language="java" name="it.unitn.dto.Shop" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/dto/Shop.java" binary="false">    
+    <position height="-1" width="-1" x="799" y="106"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="12" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.DistrictEBManage" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/DistrictEBManage.java" binary="false">    
+    <position height="-1" width="-1" x="1042" y="-167"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="13" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.MunicipalEBManage" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/MunicipalEBManage.java" binary="false">    
+    <position height="-1" width="-1" x="865" y="-166"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="14" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.RegionEBManage" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/RegionEBManage.java" binary="false">    
+    <position height="-1" width="-1" x="1242" y="-166"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="15" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.ShopEBManage" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/ShopEBManage.java" binary="false">    
+    <position height="-1" width="-1" x="635" y="-175"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="16" corner="BOTTOM_RIGHT" language="java" name="it.unitn.dto.Comment" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/dto/Comment.java" binary="false">    
+    <position height="-1" width="-1" x="489" y="106"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="17" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.CommentEBManage" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/CommentEBManage.java" binary="false">    
+    <position height="-1" width="-1" x="447" y="-177"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="18" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.LoginManage" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/LoginManage.java" binary="false">    
+    <position height="-1" width="-1" x="192" y="-35"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="19" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.UserManage" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/UserManage.java" binary="false">    
+    <position height="-1" width="-1" x="36" y="-124"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="20" corner="BOTTOM_RIGHT" language="java" name="it.unitn.dto.User" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/dto/User.java" binary="false">    
+    <position height="-1" width="-1" x="44" y="108"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="21" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.UserFacade" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/UserFacade.java" binary="false">    
+    <position height="-1" width="-1" x="-150" y="-275"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="22" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.CommentEBFacade" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/CommentEBFacade.java" binary="false">    
+    <position height="-1" width="-1" x="278" y="-274"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="23" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.ShopEBFacade" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/ShopEBFacade.java" binary="false">    
+    <position height="-1" width="-1" x="571" y="-273"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="24" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.MunicipalEBFacade" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/MunicipalEBFacade.java" binary="false">    
+    <position height="-1" width="-1" x="793" y="-290"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="25" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.DistrictEBFacade" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/DistrictEBFacade.java" binary="false">    
+    <position height="-1" width="-1" x="1035" y="-287"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="26" corner="BOTTOM_RIGHT" language="java" name="it.unitn.logic.RegionEBFacade" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/logic/RegionEBFacade.java" binary="false">    
+    <position height="-1" width="-1" x="1236" y="-288"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="27" corner="BOTTOM_RIGHT" language="java" name="it.unitn.boundary.AbstractFacade" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/boundary/AbstractFacade.java" binary="false">    
+    <position height="-1" width="-1" x="569" y="-469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="true" protected="true" private="true"/>      
+      <operations public="true" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="28" corner="BOTTOM_RIGHT" language="java" name="it.unitn.entities.UserEB" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/entities/UserEB.java" binary="false">    
+    <position height="-1" width="-1" x="-151" y="-163"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="29" corner="BOTTOM_RIGHT" language="java" name="it.unitn.entities.CommentEB" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/entities/CommentEB.java" binary="false">    
+    <position height="-1" width="-1" x="299" y="-165"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <class id="30" corner="BOTTOM_RIGHT" language="java" name="it.unitn.entities.ShopEB" project="UniShopEJB" 
+    file="/UniShopEJB/ejbModule/it/unitn/entities/ShopEB.java" binary="false">    
+    <position height="-1" width="-1" x="584" y="-27"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false"/>      
+      <operations public="false" package="false" protected="false" private="false"/>    
+    </display>  
+  </class>  
+  <association id="31">    
+    <bendpoint x="1190" y="203"/>    
+    <bendpoint x="961" y="158"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="32" name="municipalEBManage">        
+        <position height="15" width="104" x="856" y="-53"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="34">    
+    <bendpoint x="119" y="219"/>    
+    <bendpoint x="425" y="222"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="35" name="shops">        
+        <position height="15" width="37" x="747" y="170"/>      
+      </attribute>      
+      <multiplicity id="36" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="37">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <association id="38">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="39" name="regionManage">        
+        <position height="15" width="77" x="1212" y="-97"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="42" name="districtManage"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="45" name="regionManage"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="47">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="48">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <association id="49">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="50" name="loginManage"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="52">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="53" name="user"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="55">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="56" name="municipalEBManage"/>      
+      <multiplicity id="57" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="58">    
+    <bendpoint x="902" y="157"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="59" name="shopEBManage">        
+        <position height="15" width="84" x="612" y="-67"/>      
+      </attribute>      
+      <multiplicity id="60" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="61">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="62" name="commentList"/>      
+      <multiplicity id="63" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="64">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <association id="65">    
+    <bendpoint x="1097" y="230"/>    
+    <bendpoint x="957" y="186"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="66" name="shops">        
+        <position height="15" width="37" x="836" y="168"/>      
+      </attribute>      
+      <multiplicity id="67" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="68">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="69" name="userManage"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="71">    
+    <bendpoint x="321" y="-49"/>    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="72" name="idshop"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="74">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="75" name="regionEBFacade"/>      
+      <multiplicity id="76" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="77">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="78" name="municipalEBFacade"/>      
+      <multiplicity id="79" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="80">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="81" name="comments">        
+        <position height="15" width="56" x="523" y="154"/>      
+      </attribute>      
+      <multiplicity id="82" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="27"/>  
+  </generalization>  
+  <association id="84">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="85" name="userFacade"/>      
+      <multiplicity id="86" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="87">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="88" name="userManage">        
+        <position height="15" width="69" x="-15" y="-33"/>      
+      </attribute>      
+      <multiplicity id="89" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="90">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="91" name="loginManage"/>      
+      <multiplicity id="92" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="93">    
+    <bendpoint x="300" y="-29"/>    
+    <end type="SOURCE" refId="30" navigable="false">      
+      <attribute id="94" name="commentEBList"/>      
+      <multiplicity id="95" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="96">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="27"/>  
+  </generalization>  
+  <association id="97">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="98" name="shopEBFacade"/>      
+      <multiplicity id="99" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="100">    
+    <bendpoint x="318" y="143"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="101" name="commentEBManage"/>      
+      <multiplicity id="102" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="103">    
+    <bendpoint x="-36" y="111"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="104" name="userManage">        
+        <position height="15" width="69" x="25" y="-61"/>      
+      </attribute>      
+      <multiplicity id="105" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="106">    
+    <bendpoint x="379" y="20"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="107" name="shopEBManage">        
+        <position height="15" width="84" x="544" y="-93"/>      
+      </attribute>      
+      <multiplicity id="108" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="109">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <association id="110">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="111" name="commentEBFacade"/>      
+      <multiplicity id="112" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="113">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="27"/>  
+  </generalization>  
+  <association id="114">    
+    <bendpoint x="1186" y="-25"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="115" name="districtManage">        
+        <position height="15" width="79" x="1069" y="-103"/>      
+      </attribute>      
+      <multiplicity id="116" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="117">    
+    <bendpoint x="116" y="70"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="118" name="userManage">        
+        <position height="15" width="69" x="-71" y="-17"/>      
+      </attribute>      
+      <multiplicity id="119" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="120">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="121" name="shop"/>      
+      <multiplicity id="122" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="123">    
+    <bendpoint x="1028" y="-403"/>    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="27"/>  
+  </generalization>  
+  <association id="124">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="125" name="user"/>      
+      <multiplicity id="126" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="127">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="128" name="shopEBManage">        
+        <position height="15" width="84" x="646" y="-110"/>      
+      </attribute>      
+      <multiplicity id="129" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="130">    
+    <bendpoint x="521" y="447"/>    
+    <bendpoint x="521" y="505"/>    
+    <bendpoint x="733" y="506"/>    
+    <bendpoint x="733" y="230"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="131" name="shop">        
+        <position height="15" width="31" x="781" y="181"/>      
+      </attribute>      
+      <multiplicity id="132" minimum="0" maximum="1">        
+        <position height="15" width="21" x="817" y="193"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="133">    
+    <bendpoint x="1177" y="215"/>    
+    <bendpoint x="954" y="166"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="134" name="shopEBManage">        
+        <position height="15" width="84" x="632" y="-84"/>      
+      </attribute>      
+      <multiplicity id="135" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="136">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="137" name="userFacade"/>      
+      <multiplicity id="138" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="139">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="140" name="comments"/>      
+      <multiplicity id="141" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="142">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="143" name="shopEBFacade"/>      
+      <multiplicity id="144" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="145">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="146" name="loginManage">        
+        <position height="15" width="69" x="211" y="58"/>      
+      </attribute>      
+      <multiplicity id="147" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="148">    
+    <bendpoint x="991" y="234"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="149" name="shop">        
+        <position height="15" width="31" x="795" y="159"/>      
+      </attribute>      
+      <multiplicity id="150" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="151">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="152" name="commentCollection"/>      
+      <multiplicity id="153" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="154">    
+    <bendpoint x="95" y="188"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="155" name="shopEBManage">        
+        <position height="15" width="84" x="494" y="-113"/>      
+      </attribute>      
+      <multiplicity id="156" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="157">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="158" name="user"/>      
+      <multiplicity id="159" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="160">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="161" name="loginB"/>      
+      <multiplicity id="162" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="163">    
+    <bendpoint x="574" y="-158"/>    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <association id="164">    
+    <end type="SOURCE" refId="28" navigable="true">      
+      <attribute id="165" name="commentList"/>      
+      <multiplicity id="166" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true">      
+      <attribute id="167" name="iduser"/>      
+      <multiplicity id="168" minimum="0" maximum="1"/>    
+    </end>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="169">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="170" name="commentEBManage">        
+        <position height="15" width="103" x="415" y="-116"/>      
+      </attribute>      
+      <multiplicity id="171" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="172">    
+    <bendpoint x="751" y="185"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="173" name="shopEBManage">        
+        <position height="15" width="84" x="716" y="-85"/>      
+      </attribute>      
+      <multiplicity id="174" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="175">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="176">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <association id="177">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="178" name="districtEBFacade"/>      
+      <multiplicity id="179" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="180">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="181">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <generalization id="182">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="27"/>  
+  </generalization>  
+  <association id="183">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="184" name="municipalEBManage">        
+        <position height="15" width="104" x="906" y="-76"/>      
+      </attribute>      
+      <multiplicity id="185" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="186">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="27"/>  
+  </generalization>  
+  <association id="187">    
+    <bendpoint x="663" y="130"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="188" name="municipalEBManage">        
+        <position height="15" width="104" x="813" y="-106"/>      
+      </attribute>      
+      <multiplicity id="189" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="190">    
+    <bendpoint x="-211" y="206"/>    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="191" name="userManage">        
+        <position height="15" width="69" x="-113" y="-52"/>      
+      </attribute>      
+      <multiplicity id="192" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="193">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="194">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="false" package="false" initial-value="true" signature="false" 
+    visibility="false">    
+    <attributes public="false" package="false" protected="false" private="false"/>    
+    <operations public="false" package="false" protected="false" private="false"/>  
+  </classifier-display>  
+  <association-display labels="false" multiplicity="false"/>
+</class-diagram>
